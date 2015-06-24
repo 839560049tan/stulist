@@ -1,0 +1,37 @@
+div#div1{ 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    bottom:0; 
+    right:0; 
+	z-index:-1; 
+} 
+ 
+
+
+
+.three{
+	
+    width: 260px;
+	height: 405px;
+	background-color: BBBBBB;
+	font-size: 25px;
+	font-weight: bold;
+	float: left;
+}
+.four{
+	
+    width: 1040px;
+	height: 405px;
+	background-color: BBBBBB;
+    font-size: 30px;
+	font-weight: bold;
+	float: left;
+}
+.five{
+	border-style:dashed;
+    width: 800px;
+	height: 405px;
+	background-color: CCCCFF;
+
+}
