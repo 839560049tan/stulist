@@ -1,0 +1,28 @@
+﻿<html>
+ <head>
+  <link rel ="stylesheet" type="text/css" href="/static/d.css ">
+    <title>{% block title %}缺省标题{% end %}</title>
+    {% block js %}{% end %} 
+  </head>
+   <body>
+   <div class="div1"><img src="static/img/img.jpg"/></div>
+  
+ 
+    <div class="three">  
+        <ul>
+          <li><a href="/" style="display:block;width:200px;height:60px;">主页</a></li>
+          <li><a href="/coulist">学生名单</a></li>
+        </ul>
+    </div>
+        <div class="four">
+        <div class="five">
+       
+        {% block content %}
+        {% end %}          
+       </div>
+    </div>>
+
+  </body>
+</html>
+
+

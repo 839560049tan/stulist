@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %} 
+  学生名单  
+{% end %}
+
+{% block content %}
+	<a href="couedit/new">新建</a>
+	<hr>
+		<table border="3"align="center"width="777"height="250">
+
+			<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+			<td>性别</td>
+			<td>专业</td>
+			<td>系别</td>
+			<td>宿舍区</td>
+			<td>说明</td>
+		</tr>
+		{% for cou in courses %}
+		<tr>
+			<td>{{ cou['sno'] }}</td>
+			<td>{{ cou['sname'] }}</td>
+			<td>{{ cou['sage'] }}</td>
+			<td>{{ cou['ssex'] }}</td>
+			<td>{{ cou['sspecialty'] }}</td>
+			<td>{{ cou['sdepart'] }}</td>
+			<td>{{ cou['sdromitory'] }}</td>
+			<td>{{ cou['notes'] if cou['notes'] is not None else '' }}</td>
+			<td>
+				<a href="couedit/{{cou['sno']}}"> <input type="button" value="修改"> </a> 
+				<a href="coudel/{{cou['sno']}}"> <input type="button" value="删除 "> </a> 
+			</td>
+		</tr>
+		{% end %}
+	</table> 
+{% end %}
+
+

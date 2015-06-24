@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} 
+  修改学生信息
+{% end %}
+
+{% block content %} 
+	<a href="/coulist">返回</a>
+	<hr>
+	<form action="/couedit/{{student['sno']}}" method="post">
+    姓名：<input type="text" name="sname" value="{{student['sname']}}"> <br>
+    年龄：<input type="text" name="sage" value="{{student['sage']}}"> <br>
+    性别：<input type="text" name="ssex" value="{{student['ssex']}}"> <br>
+    专业：<input type="text" name="sspecialty" value="{{student['sspecialty']}}"> <br>
+    系别：<input type="text" name="sdepart" value="{{student['sdepart']}}"> <br>
+    宿舍区：<input type="text" name="sdromitory" value="{{student['sdromitory']}}"> <br>
+
+    说明：<input type="text" name="notes" value="{{student['notes'] if student['notes'] is not None else ''}}">
+    <input type="submit" value="提交">
+    </form>
+
+{% end %}
